@@ -8,20 +8,20 @@
     android:paddingTop="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    tools:context="com.example.mks.gadgethunter.Activities.MessagesActivity">
+    tools:context="com.example.mks.gadgethunter.shuvo.ui.activities.MessagesActivity">
 
     <SearchView
         android:id="@+id/message_search"
         android:background="#E0F2F1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"/>
 
     <ListView
 
         android:id="@+id/user_messages_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="3.0sp" />
+        android:dividerHeight="3.0sp"/>
 
 </LinearLayout>
