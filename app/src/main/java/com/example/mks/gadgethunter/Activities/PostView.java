@@ -193,8 +193,8 @@ public class PostView extends AppCompatActivity {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                         Comments c = dataSnapshot.getValue(Comments.class);
-                        adapter.list.add(c);
-                        keyList.add(dataSnapshot.getKey().toString());
+                        adapter.list.add(0,c);
+                        keyList.add(0,dataSnapshot.getKey().toString());
                         adapter.notifyDataSetChanged();
                     }
 

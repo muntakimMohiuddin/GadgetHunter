@@ -24,11 +24,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mks.gadgethunter.R;
+import com.example.mks.gadgethunter.shuvo.ui.activities.LoginActivity;
+import com.example.mks.gadgethunter.shuvo.ui.activities.SplashActivity;
+import com.example.mks.gadgethunter.shuvo.ui.activities.UserListingActivity;
+import com.example.mks.gadgethunter.shuvo.utils.Constants;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -54,6 +59,22 @@ public class MainTabs extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tabs);
+        FirebaseDatabase.getInstance()
+                .getReference()
+                .child(Constants.ARG_USERS)
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("uid").setValue(FirebaseAuth
+        .getInstance().getCurrentUser().getUid());
+        FirebaseDatabase.getInstance()
+                .getReference()
+                .child(Constants.ARG_USERS)
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("email").setValue(FirebaseAuth
+                .getInstance().getCurrentUser().getEmail());
+        FirebaseDatabase.getInstance()
+                .getReference()
+                .child(Constants.ARG_USERS)
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .child(Constants.ARG_FIREBASE_TOKEN)
+                .setValue(FirebaseInstanceId.getInstance().getToken());
         initialize();
     }
 
@@ -171,8 +192,13 @@ public class MainTabs extends AppCompatActivity implements NavigationView.OnNavi
         int id = item.getItemId();
         Intent intent;
         if (id == R.id.messages) {
-            intent = new Intent(MainTabs.this, MainTabs.class);
-            startActivity(intent);
+            if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                // if logged in redirect the user to user listing activity
+               startActivity(new Intent(getApplicationContext(),UserListingActivity.class));
+            } else {
+                // otherwise redirect the user to login activity
+                LoginActivity.startIntent(getApplicationContext());
+            }
         } else if (id == R.id.settings) {
             intent = new Intent(MainTabs.this, Settings.class);
             startActivity(intent);

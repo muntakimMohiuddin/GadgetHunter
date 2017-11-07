@@ -199,9 +199,9 @@ public class CommentActivity extends AppCompatActivity {
                 Log.d("rec child", "ok");
                 Comments c = dataSnapshot.getValue(Comments.class);
                 Log.d("rec comment captured", "ok");
-                adapter.list.add(c);
+                adapter.list.add(0,c);
 
-                keyList.add(dataSnapshot.getKey().toString());
+                keyList.add(0,dataSnapshot.getKey().toString());
                 adapter.notifyDataSetChanged();
             }
 
