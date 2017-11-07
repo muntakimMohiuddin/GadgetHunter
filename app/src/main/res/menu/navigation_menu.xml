@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.g">
+
+    <item
+        android:id="@+id/messages"
+        android:background="@drawable/textview_borders"
+        android:icon="@mipmap/ic_message_black_24dp"
+        android:title="Messages"></item>
+    <item
+        android:id="@+id/notifications"
+        android:background="@drawable/textview_borders"
+        android:icon="@mipmap/ic_language_black_24dp"
+        android:title="Notifications"></item>
+    <item
+        android:id="@+id/threads"
+        android:background="@drawable/textview_borders"
+        android:icon="@mipmap/ic_pages_black_24dp"
+        android:title="Threads"></item>
+    <item
+        android:id="@+id/replies"
+        android:icon="@mipmap/ic_announcement_black_24dp"
+        android:background="@drawable/textview_borders"
+        android:title="Replies"></item>
+    <item
+        android:id="@+id/settings"
+        android:icon="@mipmap/ic_settings_applications_black_24dp"
+        android:background="@drawable/textview_borders"
+        android:title="Settings"></item>
+    <item
+        android:id="@+id/add_new_product"
+        android:background="@drawable/textview_borders"
+        android:icon="@mipmap/ic_add_shopping_cart_black_24dp"
+        android:title="Add new Product"></item>
+    <item
+        android:id="@+id/view_shop"
+        android:background="@drawable/textview_borders"
+        android:icon="@mipmap/ic_shop_black_24dp"
+        android:title="View Shop"></item>
+</menu>

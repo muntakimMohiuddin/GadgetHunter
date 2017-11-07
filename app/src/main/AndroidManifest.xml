@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mks.gadgethunter">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainTabs"
+            android:label="@string/title_activity_main_tabs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.Featured"
+            android:label="@string/title_featured_rec_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.Settings" />
+        <activity android:name=".test" />
+        <activity android:name=".Activities.PostView" />
+        <activity android:name=".Activities.Threads" />
+        <activity android:name=".Activities.Following" />
+        <activity android:name=".Activities.ForumPost" />
+        <activity android:name=".Activities.UploadImage" />
+        <activity android:name=".Activities.CommentActivity" />
+        <activity android:name=".Activities.ProductView" />
+        <activity android:name=".Activities.ProductActivity" />
+        <activity android:name=".Activities.AddProductActivity" />
+        <activity android:name=".Activities.ProductViewActivity" />
+        <activity android:name=".Activities.MessagesActivity" />
+        <activity android:name=".Activities.NotificationActivity" />
+        <activity android:name=".Activities.Shop" />
+        <activity android:name=".Activities.ShopItemActivity" />
+        <activity android:name=".Activities.AddShop" />
+        <activity android:name=".Activities.OrderActivity" />
+        <activity android:name=".Activities.PromptShop" />
+        <activity android:name=".Activities.ViewShop" />
+        <activity
+            android:name=".Activities.ShopOwnersTabs"
+            android:label="@string/title_activity_shop_owners_tabs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.FragmentOrders"></activity>
+    </application>
+
+</manifest>

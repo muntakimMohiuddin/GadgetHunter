@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mks.gadgethunter.Activities.ForumPost">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_marginLeft="50dp"
+        android:hint="                         TITLE"
+        android:layout_marginTop="50dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:background="@drawable/edit_text_borders"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearlayout">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:hint="  Write your post..." />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:textSize="20dp"
+        android:layout_below="@+id/linearlayout"
+        android:id="@+id/postButton"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image"
+        android:textSize="15sp"
+        android:id="@+id/upload"
+        android:layout_below="@+id/linearlayout"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="35dp" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/postButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+</RelativeLayout>

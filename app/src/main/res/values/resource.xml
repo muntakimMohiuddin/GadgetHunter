@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_array">
+        <item>Phone</item>
+        <item>Earphone</item>
+        <item>Charger</item>
+        <item>BackCover</item>
+        <item>Pendrive</item>
+        <item>OtgCable</item>
+        <item>HardDisk</item>
+        <item>Laptop</item>
+        <item>PowerBank</item>
+    </string-array>
+    <string-array name="yes_no">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Coming Soon</item>
+    </string-array>
+
+</resources>

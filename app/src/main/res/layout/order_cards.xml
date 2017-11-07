@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="1dp">
+
+    <RelativeLayout
+        android:id="@+id/cards"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="productname"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/qty_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/product_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                android:text="Qty: "
+                android:textColor="#ff0011"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Price :"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/orderer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qty_price"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="#376137"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/delivery_address_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderer_name"
+            android:layout_marginLeft="10dp"
+            android:text="Delivery Address"
+            android:textColor="#281616"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/delivery_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/delivery_address_tag"
+            android:layout_margin="10dp"
+            android:text=""
+            android:textColor="#3333a9"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/payment_method_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delivery_address"
+            android:layout_margin="10dp"
+            android:text="Payment Method"
+            android:textColor="#000000"
+            android:textSize="25sp"
+
+            />
+
+        <TextView
+            android:id="@+id/payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment_method_tag"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Bkash"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/contact_info_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payment_method"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Contact No."
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_info_tag"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="#0fac39"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/contact_no" />
+
+        <TextView
+            android:id="@+id/delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:text="Mark as Delivered"
+            android:textColor="#39f704"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
